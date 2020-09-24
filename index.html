@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>IT Bootcamp Chat</h1>
+        <p>Choose a chatroom</p>
+    </header>
+    <nav class="col-12">
+        <p class="col-3"><a id="general" href="#">#general</a></p>
+        <p class="col-3"><a id="js" href="#">#js</a></p>
+        <p class="col-3"><a id="homework" href="#">#homeworks</a></p>
+        <p class="col-3"><a id="tests" href="#">#tests</a></p>
+    </nav>
+    <section class="col-12">
+        <div class="row">
+            <div class="col-3" style="color: rgb(187, 160, 3);">M</div>
+            <div class="col-6">
+                <ul>
+                    <!--Ovde poruke se prikazuju-->
+                </ul>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </section>
+    <div class="row col-12">
+        <div class="col-3" style="color: rgb(126, 110, 19);">M</div>
+        <form id="form1" class="col-6">
+            <input type="text" name="message" id="message" placeholder="Your message" class="inputs col-3">
+            <input type="submit" value="Send" class="submits col-2">
+            <br>
+        </form>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3" style="color: rgb(142, 122, 9);">M</div>
+        <form id="form2" class="col-6">
+            <input type="text" name="username" id="username" placeholder="Update username" class="inputs col-3">
+            <input type="submit" value="Update" class="submits col-2">
+        </form>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="usernameUpdate" class="col-12">
+                <!--PRIKAZIVANJE PORUKE USERNAME PROMENa-->
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBpz79CRBK8eibsU_kQiJQi07M9YzyZFyA",
+        authDomain: "final-project-it-bootcamp.firebaseapp.com",
+        databaseURL: "https://final-project-it-bootcamp.firebaseio.com",
+        projectId: "final-project-it-bootcamp",
+        storageBucket: "final-project-it-bootcamp.appspot.com",
+        messagingSenderId: "21223298840",
+        appId: "1:21223298840:web:9487c826d8fe5bcbc5b06d",
+        measurementId: "G-3F0H5C18Y7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    let db = firebase.firestore();
+    </script>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

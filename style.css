@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    background: linear-gradient(508deg, rgb(187, 160, 3) 20%, rgb(126, 110, 19) 35%, rgb(204, 171, 6) 100%);
+}
+
+/*Header*/
+h1 {
+    text-align: center;
+    color: rgb(248, 212, 9);
+}
+
+header p {
+    text-align: center;
+    color: rgb(243, 208, 7);
+}
+/*Navigation*/
+nav {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+nav p {
+    border: 1px solid gold;
+    border-radius: 10px;
+    background-color: rgb(148, 127, 9);
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: gold;
+    padding: 10px;
+}
+
+/*Promena backgrounda dugmadi*/
+.click {
+    background-color: gold;
+    color: rgb(120, 106, 30);
+    border-radius: 10px;
+}
+
+.noclick {
+    border: 1px solid gold;
+    border-radius: 10px;
+    background-color: rgb(148, 127, 9);
+}
+
+/*Poruke user-a*/
+.user {
+    width: 250px;
+    margin-left: auto;
+    border-radius: 15px 15px 0 15px;
+}
+
+/*Bold username u poruci*/
+.username {
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: gold;
+    color: rgb(120, 106, 30);
+    border-radius: 10px;
+}
+
+/*Form*/
+form {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.inputs {
+    width: 300px;
+    padding: 5px;
+    margin-top: 1px;
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+.submits {
+    width: 150px;
+    padding: 6px;
+    border: 1px solid gold;
+    border-radius: 15px;
+    background-color: rgb(148, 127, 9);
+    color: gold;
+    margin-top: 1px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+    outline: none;
+}
+
+.submits:hover {
+    background-color: gold;
+    color: rgb(120, 106, 30);
+    cursor: pointer;
+} 
+
+/*Section*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #0e0e0e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: gold;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+ul {
+    background-color: rgb(193, 166, 14);
+    height: 500px;
+    overflow: auto;
+    border: 1px solid gold;
+    box-shadow: gold 2px 5px 6px 2px;
+}
+
+ul li {
+    width: 250px;
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid gold;
+    border-radius: 0 15px 15px 15px;
+    padding: 10px;
+    background-color: rgb(223, 199, 62);
+    margin-top: 2px;
+}
+
+/*Show Username*/
+.showUsername {
+    background-color: rgb(236, 204, 18);
+    text-align: center;
+    color:rgb(93, 82, 21);
+    font-size: 20px;
+    position: sticky;
+    bottom: 0px;
+}
+
+
