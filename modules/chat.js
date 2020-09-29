@@ -8,6 +8,7 @@ export class Chatroom {
     //seters
     set room(r) {
         this._room = r;
+        localStorage.setItem("roomLS", r);
     }
     set username(u) {
         if(!/\S/.test(u)) {
@@ -47,12 +48,12 @@ export class Chatroom {
         .orderBy('created_at', 'asc')
         .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
-                // console.log(change);
                 let type = change.type;
                 let doc = change.doc;
+                let dataId = doc.id;
                 if(type === "added"){
                     let data = doc.data();
-                    callback(data);
+                    callback(data, dataId);
                 }
             });
         });
@@ -64,7 +65,6 @@ export class Chatroom {
     //update room
     updateRoom(updRoom) {
         this.room = updRoom;
-        localStorage.setItem("roomLS", updRoom);
         if(this.unsub) {
             this.unsub(); 
         }

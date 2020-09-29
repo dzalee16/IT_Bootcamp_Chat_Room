@@ -62,28 +62,51 @@ export class ChatUI {
         }        
     }
     //Metod za ispis poruka na stranici
-    templateLI(data) {
+    templateLI(data, dataId) {
         let date = this.formatDate(data);
 
-        let htmlLIUser = 
-        `<li class="user">
-            <span class="username">${data.username} : </span>
-            <span class="message">${data.message}</span>
-            <div class="date">${date}</div>
-        </li>`;
+        let li = document.createElement("li");
+        let spanUsername = document.createElement("span");
+        spanUsername.setAttribute("class", "username");
+        spanUsername.innerHTML += `${data.username}`;
+        let spanTwoDot = document.createElement("span");
+        spanTwoDot.innerHTML += " : ";
+        let spanMessage = document.createElement("span");
+        spanMessage.setAttribute("class", "message");
+        spanMessage.innerHTML += data.message;
+        let divDate = document.createElement("div");
+        divDate.setAttribute("class", "date");
+        divDate.innerHTML += date;
+        let spanImage = document.createElement("span");
+        spanImage.setAttribute("class", "image");
+        let img = document.createElement("img");
+        img.setAttribute("src", "images/trash.png");
+        spanImage.appendChild(img);
 
-        let htmlLI = 
-        `<li>
-            <span class="username">${data.username} : </span>
-            <span class="message">${data.message}</span>
-            <div class="date">${date}</div>
-        </li>`;
+        li.appendChild(spanUsername);
+        li.appendChild(spanTwoDot);
+        li.appendChild(spanMessage);
+        li.appendChild(divDate);
+        li.appendChild(spanImage);
+        li.setAttribute("data-id", dataId);
 
-        if(data.username == localStorage.getItem("Username")){
-            this.showMessages.innerHTML += htmlLIUser;
+
+        //Proveravam jednakost sa local storidzom
+        if(data.username === localStorage.getItem("Username")) {
+            let allUser = document.querySelectorAll("li");
+            allUser.forEach(user => {
+                if(data.username === user.firstChild.textContent){
+                    user.classList.add("user");
+                } else {
+                    user.classList.remove("user");
+                }
+            });
+            li.classList.add("user");
+            this.showMessages.appendChild(li);
         } else {
-            this.showMessages.innerHTML += htmlLI;
+            this.showMessages.appendChild(li);
         }
-        
+
+        document.getElementById("chat-area").scrollTop = document.getElementById("chat-area").scrollHeight;
     }
 }

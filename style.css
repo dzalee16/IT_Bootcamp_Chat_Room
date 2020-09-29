@@ -62,6 +62,19 @@ nav a {
 /*Bold username u poruci*/
 .username {
     font-weight: bold;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.date {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.message {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 nav a:hover {
@@ -72,8 +85,6 @@ nav a:hover {
 
 /*Form*/
 form {
-    width: 80%;
-    margin: 0 auto;
     margin-top: 10px;
     padding: 10px;
 }
@@ -84,6 +95,14 @@ form {
     margin-top: 1px;
     border: 1px solid gold;
     border-radius: 5px;
+}
+
+.inputDate {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    margin-left: 2px;
 }
 
 .submits {
@@ -127,8 +146,7 @@ background: #555;
 }
 
 ul {
-    background-color: rgb(193, 166, 14);
-    height: 500px;
+    height: 400px;
     overflow: auto;
     border: 1px solid gold;
     box-shadow: gold 2px 5px 6px 2px;
@@ -154,5 +172,18 @@ ul li {
     position: sticky;
     bottom: 0px;
 }
+
+/*Trash cant image*/
+.image img {
+    width: 20px;
+    margin-left: 200px;
+    margin-top: 5px;
+}
+
+.image img:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
 
 

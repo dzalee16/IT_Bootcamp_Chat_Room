@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+    <title>IT Bootcamp - Chat Room</title>
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-3" style="color: rgb(187, 160, 3);">M</div>
             <div class="col-6">
-                <ul>
+                <ul id="chat-area">
                     <!--Ovde poruke se prikazuju-->
                 </ul>
             </div>
@@ -31,8 +31,26 @@
     </section>
     <div class="row col-12">
         <div class="col-3" style="color: rgb(126, 110, 19);">M</div>
+        <form id="form3" class="col-6">
+            <input type="color" name="color" id="color" class="inputs col-3" value="#ffffff">
+            <input type="submit" value="Update color" class="submits col-2">
+            <button class="col-2 submits" id="resetBtn">Reset Color</button>
+        </form>
+        <div class="col-3"></div>
+    </div>
+    <div class="row col-12">
+        <div class="col-3" style="color: rgb(126, 110, 19);">M</div>
+        <form id="form4" class="col-8">
+            <input type="datetime-local" name="firstDate" id="firstDate" class="col-2 inputDate">
+            <input type="datetime-local" name="secondDate" id="secondDate" class="col-2 inputDate">
+            <input type="submit" value="Set dates" class="col-2 submits">
+        </form>
+        <div class="col-2"></div>
+    </div>
+    <div class="row col-12">
+        <div class="col-3" style="color: rgb(126, 110, 19);">M</div>
         <form id="form1" class="col-6">
-            <input type="text" name="message" id="message" placeholder="Your message" class="inputs col-3">
+            <textarea name="message" id="message" cols="30" rows="1" placeholder="Your message" class="inputs col-3"></textarea>
             <input type="submit" value="Send" class="submits col-2">
             <br>
         </form>
@@ -52,6 +70,9 @@
                 <!--PRIKAZIVANJE PORUKE USERNAME PROMENa-->
             </div>
         </div>
+    </div>
+    <div id="image">
+
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
